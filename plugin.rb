@@ -23,7 +23,7 @@ class OAuth2BasicAuthenticator < ::Auth::OAuth2Authenticator
                         if SiteSetting.oauth2_send_auth_header?
                           opts[:token_params] = {headers: {'Authorization' => basic_auth_header }}
                         end
-                        opts[:scope] = "profile"
+                        opts[:scope] = "profile email"
                       }
   end
 
